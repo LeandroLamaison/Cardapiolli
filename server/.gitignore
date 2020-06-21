@@ -1,5 +1,7 @@
+/.vscode
+
 /node_modules
-uploads
-!uploads/.gitkeep
+
+uploads/*
 
 *.sqlite
