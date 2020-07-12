@@ -1,0 +1,40 @@
+.menuPlateWrapper {
+    display: inline-block;
+    width: 50%;
+    min-width: 200px;
+    margin-top: 15px;
+}
+
+.menuPlate {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menuPlate .plateImg {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    display: inline-block;
+}
+
+.menuPlate .plateData {
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 10px;
+    
+}
+
+.menuPlate .plateData .plateName {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.menuPlate .plateData .ingredients {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.menuPlate .plateData .price {
+    font-size:  18px;
+    margin-top:  10px;
+}

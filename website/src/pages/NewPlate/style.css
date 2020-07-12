@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+#new-plate-page {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+#new-plate-page header {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#new-plate-page header .back {
+    float: right;
+}
+
+#new-plate-page .formWrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#new-plate-page .formWrapper .form {
+    background-color: #ffffff;
+    width: 830px;
+    margin-top: 140px;
+    padding-top: 50px;
+    padding-left: 50px;
+    border-radius: 15px;
+}
+
+#new-plate-page .formWrapper .form .title {
+    font-weight: 700;
+    font-size: 48px;
+}
+
+#new-plate-page .formWrapper .form .inputs {
+    margin-top: 75px;
+}
+
+#new-plate-page .formWrapper .form .inputs .name input {
+    width: 725px;
+}
+
+#new-plate-page .input-group {
+    width: 100%;
+    display: flex;
+}
+
+#new-plate-page .formWrapper .form input {
+    width: 100%;
+}
+
+#new-plate-page .formWrapper .form textarea {
+    width: 100%;
+    resize: none;
+    font-size: 28px;
+    background-color: #eeeeee;
+    border: none;
+    border-radius: 15px;
+    height: 300px;
+    margin-top: 0;
+    color: #1E1E1E;
+    padding-left: 12px;
+    padding-top: 8px;
+}
+
+#new-plate-page .formWrapper .form .inputs .input-group .ingredients {
+    width: 45%;
+}
+
+#new-plate-page .formWrapper .form .inputs .input-group .price {
+    margin-left: 26px;
+}
+
+#new-plate-page .formWrapper .form .address .input-group .street,
+#new-plate-page .formWrapper .form .address .input-group .city {
+    width: 70%;
+}
+
+#new-plate-page .formWrapper .form .address .input-group .number,
+#new-plate-page .formWrapper .form .address .input-group .uf  {
+    width: 20%;
+    margin-left: 26px;
+}
+
+#new-plate-page .formWrapper .form .password .passInput,
+#new-plate-page .formWrapper .form .password .checkPass {
+    width: 70%;
+} 
+
+#new-plate-page .formWrapper .form .errorMessage {
+    font-size: 24px;
+    color: red;
+    margin-top: 50px;
+}
+
+#new-plate-page .formWrapper .form .submitWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+#new-plate-page .formWrapper .form .submitWrapper .submit {
+    width: 330px;
+    height: 100px;
+    border-radius: 15px;
+    border: none;
+    background-color: #22863E;
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 100px;
+}
+
+
+

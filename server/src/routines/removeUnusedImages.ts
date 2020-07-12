@@ -18,7 +18,7 @@ export default async function() {
         if(err) console.log(err);
 
         files.forEach(file => {
-            if(!images.includes(file)) asyncUnlink( path.join(dir, file) );
+            if(!images.includes(file) && file !== 'none.jpg') asyncUnlink( path.join(dir, file) );
         })
     });
     

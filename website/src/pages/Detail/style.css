@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+#detail-page {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+#detail-page header {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#detail-page header .wrapper {
+    width: 100%;
+}
+
+
+#detail-page header .wrapper .back {
+    float: right;
+}
+
+#detail-page header .wrapper .restaurantData {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 135px;
+    font-size: 28px;
+}
+
+#detail-page header .wrapper .restaurantData .name {
+    font-size: 72px;
+}
+
+#detail-page header .wrapper .restaurantData .adress {
+    margin-top: 32px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#detail-page header .wrapper .restaurantData .phone {
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+}
+
+#detail-page .plateList {
+    margin-top: 90px;
+}

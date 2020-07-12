@@ -28,7 +28,7 @@ export default {
             email: Joi.string().required()
         }),
         [Segments.HEADERS]: Joi.object({
-            authorization: Joi.string().required()
+            authorization: Joi.string().optional()
         }).unknown()
     }),
 

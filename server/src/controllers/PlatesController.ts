@@ -7,7 +7,13 @@ interface Plate {
     ingredients: string;
     image: string;
     price: Number;
-    main: Boolean;
+    main: boolean;
+}
+
+interface PlateUpdate {
+    name: string;
+    ingredients: string;
+    price: Number;
 }
 
 class PlatesController {
@@ -90,8 +96,8 @@ class PlatesController {
 
     async change(request: Request, response: Response, next: NextFunction) {
         const {id} = request.params;
-        const authorization = request.headers.authorization;
-        const main = request.body.main !== null && request.body.main !== undefined ? true: false;
+        const {authorization} = request.headers;
+        const {main} = request.body;
         const fields = ['name', 'ingredients', 'price'];
 
         const plate = await knex('plates').select(['restaurant', 'image', 'name']).where({id}).first().catch(() => false);
@@ -109,12 +115,19 @@ class PlatesController {
 
         let updateFields: Plate = {} as Plate;
         fields.forEach( field => {
-            updateFields[field as keyof Plate] = request.body[field]; 
+            updateFields[field as keyof PlateUpdate] = request.body[field]; 
         });
 
         if(request.file) updateFields.image = request.file.filename;
         
-        updateFields.main = main;
+        if(main) {
+            if(main === 'true') {
+                updateFields.main = true;
+            }
+            else if(main === 'false') {
+                updateFields.main = false;
+            }
+        }
 
         const trx = await knex.transaction();
 

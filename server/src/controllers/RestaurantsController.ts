@@ -40,6 +40,16 @@ interface Plate {
     restaurant: string;
 }
 
+interface RestrictPlate {
+    id: number;
+    name: string;
+    image: string;
+    price: number;
+    ingredients: string;
+    main: Boolean;
+    restaurant: undefined;
+}
+
 class RestaurantsController {
 
     async create(request: Request, response: Response, next: NextFunction) {
@@ -86,7 +96,7 @@ class RestaurantsController {
             };
 
             if(uniqueFieldError.status) {
-                return response.status(400).json({error: uniqueFieldError.message, fields: uniqueFieldError.fields});
+                return response.status(200).json({code: 1, error: uniqueFieldError.message, fields: uniqueFieldError.fields}).send();
             }
 
         //-----------------------------------------------------------------------------------------------------------
@@ -114,8 +124,8 @@ class RestaurantsController {
         const [count] = await knex('restaurants').count();
 
         const restaurants = await knex('restaurants')
-            .limit(4)
-            .offset(4 * (Number(page) - 1))    
+            .limit(50)
+            .offset(50 * (Number(page) - 1))    
             .select('*');
 
         const filteredRestaurants = restaurants.filter(restaurant => 
@@ -140,19 +150,39 @@ class RestaurantsController {
 
     async show(request: Request, response: Response) {
         const {email} = request.params;
-        const {authorization} = request.headers;
+        const authorization = request.headers.authorization ? request.headers.authorization : false;
         
         const restaurant = await knex('restaurants').select('*').where({email}).first().catch(() => false);
         if(!restaurant) return response.status(404).send();
-        if(restaurant.password !== authorization) return response.status(401).send();
 
         const plates = await knex('plates').select('*').where('restaurant', restaurant.id).catch(() => false);
         if(!plates) return response.status(404).send();
 
-        response.json({
-             ...restaurant,
-            plates
-        });
+        const serializedPlates = (plates as RestrictPlate[]).map(plate => {
+            plate.restaurant = undefined;
+            return plate;
+        })
+
+        if(authorization) {
+            if(restaurant.password !== authorization) return response.status(401).send();
+
+            response.json({
+                ...restaurant,
+               plates: serializedPlates
+           });
+        }
+        else {
+            const restrictedRestaurant = restaurant;
+
+            restrictedRestaurant.id = undefined;
+            restrictedRestaurant.password = undefined;
+
+            response.json({
+                ...restrictedRestaurant,
+                plates: serializedPlates
+           });
+        }
+        
 
     }
 
@@ -160,14 +190,20 @@ class RestaurantsController {
         const {email} = request.params;
         const {authorization} = request.headers;
 
-        const restaurant = await knex('restaurants').where({email}).select(['id', 'password', 'image']).first().catch(() => false);
+        const restaurant = await knex('restaurants').where({email}).select('*').first().catch(() => false);
 
         if(!restaurant) return response.status(404).send();
         if(restaurant.password !== authorization) return response.status(401).send();
 
         //Handler attempt to register a unique key field already registered
 
-            const {check_name = "", check_city = "", check_uf = "", check_password = "", check_email = ""} = request.body;
+            const {
+                name: check_name = restaurant.name, 
+                city: check_city = restaurant.city, 
+                uf: check_uf = restaurant.uf, 
+                password: check_password = restaurant.password, 
+                email: check_email = restaurant.email
+            } = request.body;
             
             const uniqueFieldError = {
                 status: false,
@@ -175,11 +211,11 @@ class RestaurantsController {
                 message: "Field already registered"
             };
             
-            const checkName = await knex('restaurants').select('name').where({name: check_name, city: check_city, uf: check_uf});
-            const checkEmail = await knex('restaurants').select('email').where({email: check_email});
-            const checkPassword = await knex('restaurants').select('password').where({password: check_password});
+            const checkName = await (await knex('restaurants').select(['id','name']).where({name: check_name, city: check_city, uf: check_uf})).filter(res => res.id !== restaurant.id);
+            const checkEmail = await (await knex('restaurants').select('id','email').where({email: check_email})).filter(res => res.id !== restaurant.id);
+            const checkPassword = await (await knex('restaurants').select('id','password').where({password: check_password})).filter(res => res.id !== restaurant.id);
 
-            if(checkName.length > 0) {
+            if(checkName.length > 0 ) {
                 uniqueFieldError.status = true;
                 uniqueFieldError.fields.push("name");
             };
@@ -193,7 +229,7 @@ class RestaurantsController {
             };
 
             if(uniqueFieldError.status) {
-                return response.status(400).json({error: uniqueFieldError.message, fields: uniqueFieldError.fields});
+                return response.status(200).json({code: 1, error: uniqueFieldError.message, fields: uniqueFieldError.fields}).send();
             }
 
         //-----------------------------------------------------------------------------------------------------------
@@ -213,7 +249,7 @@ class RestaurantsController {
 
         await knex('restaurants').update(updateFields).where({id}).catch(err => response.json(err).send());
 
-        response.status(200).send();
+        response.status(201).send();
     }
 
 }

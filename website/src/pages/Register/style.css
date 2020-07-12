@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+#register-page {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+#register-page header {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#register-page header .back {
+    float: right;
+}
+
+#register-page .formWrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#register-page .formWrapper .form {
+    background-color: #ffffff;
+    width: 830px;
+    margin-top: 140px;
+    padding-top: 50px;
+    padding-left: 50px;
+    border-radius: 15px;
+}
+
+#register-page .formWrapper .form .title {
+    font-weight: 700;
+    font-size: 48px;
+}
+
+#register-page .formWrapper .form .data, 
+#register-page .formWrapper .form .address,
+#register-page .formWrapper .form .passwordArea {
+    margin-top: 75px;
+}
+
+#register-page .formWrapper .form .data .name input {
+    width: 725px;
+}
+
+#register-page  .input-group {
+    width: 100%;
+    display: flex;
+}
+
+#register-page .formWrapper .form input {
+    width: 100%;
+}
+
+#register-page .formWrapper .form .data .input-group .email,
+#register-page .formWrapper .form .data .input-group .phone {
+    width: 45%;
+}
+
+#register-page .formWrapper .form .data .input-group .phone {
+    margin-left: 26px;
+}
+
+#register-page .formWrapper .form .address .input-group .street,
+#register-page .formWrapper .form .address .input-group .city {
+    width: 70%;
+}
+
+#register-page .formWrapper .form .address .input-group .number,
+#register-page .formWrapper .form .address .input-group .uf  {
+    width: 20%;
+    margin-left: 26px;
+}
+
+#register-page .formWrapper .form .passwordArea .passInput,
+#register-page .formWrapper .form .passwordArea .checkPass {
+    width: 70%;
+} 
+
+#register-page .formWrapper .form .errorMessage {
+    margin-top: 40px;
+    font-size: 28px;
+    color: red;
+}
+
+#register-page .formWrapper .form .submitWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+#register-page .formWrapper .form .submitWrapper .submit {
+    width: 330px;
+    height: 100px;
+    border-radius: 15px;
+    border: none;
+    background-color: #22863E;
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 100px;
+}
+
+
+

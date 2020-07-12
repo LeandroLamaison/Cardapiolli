@@ -1,0 +1,54 @@
+
+.menuWrapper {
+    width: 50%;
+    display: inline-block;
+    min-width: 522px;
+    margin-top: 40px;
+    background-color: transparent;
+    border: none;
+}
+
+.menu {
+    width: 95%;
+    background-color: #eeeeee;
+    border-radius: 10px;
+    color: black;
+}
+
+.menu .restaurant {
+    height: 160px;
+    width: 100%; 
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu .restaurant .linkButton {
+    margin: 0;
+    padding: 0;
+    height: fit-content;
+    width: fit-content;
+    border: none;
+}
+
+.menu .restaurant .linkButton .restaurantImage {
+    height: 120px;
+    width: 170px;
+    border-color: #4E4E4E;
+    border-top-left-radius: 10px;
+    border-style: solid;
+}
+
+.menu .restaurant .restaurantData {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+}
+
+.menu .restaurant .restaurantData .name {
+    font-weight: 700;
+}
+

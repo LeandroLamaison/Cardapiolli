@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+#profile-page {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+#profile-page header {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#profile-page header .wrapper {
+    width: 100%;
+}
+
+
+#profile-page header .wrapper .back {
+    float: right;
+    border: none;
+    background-color: transparent;
+}
+
+#profile-page header .wrapper .restaurantData {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 135px;
+    font-size: 28px;
+}
+
+#profile-page header .wrapper .restaurantData div  {
+    display: flex;
+    align-items: center;
+}
+
+#profile-page header .wrapper .restaurantData div .name {
+    font-size: 72px;
+    display: inline;
+}
+
+#profile-page header .wrapper .restaurantData div .editButton {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    transition: opacity 0.3s;
+}
+
+#profile-page header .wrapper .restaurantData div .editButton:hover {
+    opacity: 0.7;
+}
+
+#profile-page header .wrapper .restaurantData div .editButton .editIcon {
+    margin-left: 50px;
+}
+
+#profile-page header .wrapper .restaurantData .adress {
+    margin-top: 32px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#profile-page header .wrapper .restaurantData .phone {
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+}
+
+#profile-page .plateList {
+    margin-top: 90px;
+}
+
+#profile-page .plateList .addWrapper {
+    width: 50%;
+    display: inline-block;
+    min-width: 522px;
+    margin-top: 40px;
+}
+
+#profile-page .plateList .addWrapper .addPlate {
+    width: 95%;
+    background-color: #eeeeee;
+    border-radius: 10px;
+    width: 522px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

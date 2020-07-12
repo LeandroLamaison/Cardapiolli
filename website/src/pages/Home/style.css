@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+#home-page {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+#home-page header {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#home-page header .title {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
+
+#home-page header .title img {
+    height: 265px;
+    width: 265px;
+}
+
+#home-page header .title h1 {
+    margin-top: 12px;
+}
+
+#home-page header .wrapper {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+#home-page header .wrapper .links {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 15px;
+}
+
+.filterInput {
+    background-color: #eeeeee;
+    font-size: 24px;
+    border: none;
+    padding-right: 18px;
+    padding-left: 18px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-radius: 10px;
+}
+
+#home-page header .wrapper .filters {
+    margin-top: 100px;
+    width: 565px;
+}
+
+#home-page header .wrapper .filters .filterWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#home-page header .wrapper .filters .filterWrapper .filterRestaurant {
+    width: 480px;
+}
+
+#home-page header .wrapper .filters .filterWrapper .search {
+    background-color: transparent;
+    border: none;
+}
+
+#home-page header .wrapper .filters .filterWrapper .filterCity,
+#home-page header .wrapper .filters .filterWrapper .filterPlate {
+    width: 250px;
+} 
+
+#home-page .menuList {
+    margin-top: 90px;
+}
+
+#home-page .navigatePages {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+#home-page .navigatePages button {
+    width: 330px;
+    height: 100px;
+    border-radius: 15px;
+    border: none;
+    background-color: #22863E;
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 100px;
+}

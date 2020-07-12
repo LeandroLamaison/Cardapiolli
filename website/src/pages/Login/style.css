@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+#login-page {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+#login-page header {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#login-page header .back {
+    float: right;
+}
+
+#login-page .formWrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#login-page .formWrapper .form {
+    background-color: #ffffff;
+    width: 830px;
+    margin-top: 140px;
+    padding-top: 50px;
+    padding-left: 50px;
+    border-radius: 15px;
+}
+
+#login-page .formWrapper .form .title {
+    font-weight: 700;
+    font-size: 48px;
+}
+
+#login-page .formWrapper .form .input-group {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    margin-top: 20px;
+}
+
+#login-page .formWrapper .form .input-group .email,
+#login-page .formWrapper .form .input-group .password {
+    width: 70%;
+}
+
+#login-page .formWrapper .form .input-group .email input,
+#login-page .formWrapper .form .input-group .password input {
+    width: 100%;
+}
+
+#login-page .formWrapper .form .errorMessage {
+    margin-top: 40px;
+    font-size: 28px;
+    color: red;
+}
+
+#login-page .formWrapper .form .submitWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#login-page .formWrapper .form .submitWrapper .submit {
+    width: 330px;
+    height: 100px;
+    border-radius: 15px;
+    border: none;
+    background-color: #22863E;
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 100px;
+}
+
+
+

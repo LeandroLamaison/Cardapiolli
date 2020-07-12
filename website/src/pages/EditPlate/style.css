@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+#edit-plate-page {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+#edit-plate-page header {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#edit-plate-page header .back {
+    float: right;
+}
+
+#edit-plate-page .formWrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#edit-plate-page .formWrapper .form {
+    background-color: #ffffff;
+    width: 830px;
+    margin-top: 140px;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 15px;
+}
+
+#edit-plate-page .formWrapper .form .wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#edit-plate-page .formWrapper .form .wrapper button {
+    background-color: transparent;
+    border: 0;
+}
+
+#edit-plate-page .formWrapper .form .wrapper .title {
+    font-weight: 700;
+    font-size: 48px;
+}
+
+#edit-plate-page .formWrapper .form .inputs {
+    margin-top: 75px;
+}
+
+#edit-plate-page .formWrapper .form .inputs .name input {
+    width: 725px;
+}
+
+#edit-plate-page .input-group {
+    width: 100%;
+    display: flex;
+}
+
+#edit-plate-page .formWrapper .form input {
+    width: 100%;
+}
+
+#edit-plate-page .formWrapper .form textarea {
+    width: 100%;
+    resize: none;
+    font-size: 24px;
+    background-color: #eeeeee;
+    border: none;
+    border-radius: 15px;
+    height: 300px;
+    margin-top: 0;
+    color: #1E1E1E;
+    padding-left: 12px;
+    padding-top: 8px;
+}
+
+#edit-plate-page .formWrapper .form .inputs .input-group .ingredients {
+    width: 45%;
+}
+
+#edit-plate-page .formWrapper .form .inputs .input-group .price {
+    margin-left: 26px;
+}
+
+#edit-plate-page .formWrapper .form .address .input-group .street,
+#edit-plate-page .formWrapper .form .address .input-group .city {
+    width: 70%;
+}
+
+#edit-plate-page .formWrapper .form .address .input-group .number,
+#edit-plate-page .formWrapper .form .address .input-group .uf  {
+    width: 20%;
+    margin-left: 26px;
+}
+
+#edit-plate-page .formWrapper .form .password .passInput,
+#edit-plate-page .formWrapper .form .password .checkPass {
+    width: 70%;
+} 
+
+#edit-plate-page .formWrapper .form .error {
+    margin-top: 50px;
+    font-size: 24px;
+    color: red;
+    content: Erro ao alterar conteúdo;
+}
+
+#edit-plate-page .formWrapper .form .success {
+    margin-top: 50px;
+    font-size: 24px;
+    color: green;
+    content: Atualizado com sucesso;
+}
+
+#edit-plate-page .formWrapper .form .submitWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+#edit-plate-page .formWrapper .form .submitWrapper .submit {
+    width: 330px;
+    height: 100px;
+    border-radius: 15px;
+    border: none;
+    background-color: #22863E;
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 100px;
+}
+
+
+

@@ -1,0 +1,43 @@
+.plateWrapper {
+    display: inline-block;
+    width: 50%;
+    min-width: 522px;
+    margin-top: 30px;
+}
+
+.plate {
+    width: 525px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eeeeee;
+    border-radius: 10px;
+}
+
+.plate .plateImg {
+    margin-left: 15px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.plate .plateData {
+    width: 100%;
+    padding-left: 10px;
+}
+
+.plate .plateData .plateName {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.plate .plateData .ingredients {
+    font-size: 26px;
+    margin-top: 10px;
+}
+
+.plate .plateData .price {
+    font-size:  36px;
+    margin-top:  10px;
+}
