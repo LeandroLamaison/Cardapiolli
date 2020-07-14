@@ -1,2 +1,1 @@
-![Logo](/readme-assets/Logo.svg)
-# Cardapiolli
+![Logo](/readme-assets/Logo.svg) # Cardapiolli
